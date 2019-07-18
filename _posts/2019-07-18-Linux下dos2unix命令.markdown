@@ -30,6 +30,6 @@ dos2unix命令用来将DOS格式的文本文件转换成UNIX格式的（DOS/MAC 
 
 注：unix2dos命令的使用方式与dos2unix命令的类似。
 
-## cat -v 查看非打印字符
+### cat -v 查看非打印字符
 
 cat -v job.sh     <== cat -v可以看到文件中的非打印字符，而不带-v参数的cat命令不行。
