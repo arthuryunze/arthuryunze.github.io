@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What Do A.M. And P.M. Stand For?"
-date:   2019-07-15 17:49:01 +0800
+date:   2019-08-02 17:49:01 +0800
 categories: English
 ---
 Most English speakers know that a.m. refers to the hours from midnight and noon, and p.m. to the hours from noon and midnight. But what do these ubiquitous abbreviations stand for?
