@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "dos2unix-Unix, Linux Command"
+date:   2019-07-15 17:49:01 +0800
+categories: Linux
+---
 # NAME
 
 dos2unix - DOS/MAC to UNIX text file format converter
