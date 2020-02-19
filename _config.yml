@@ -29,7 +29,19 @@ twitter_username:
 github_username:  arthuryunze
 
 # Build settings
-theme: minima
+# theme: minima
+remote_theme: thelehhman/texture
+# theme: texture
+texture:
+        title: Yunze's Blog
+        tagline: Student, Developer
+        data_format: "%b %-d, %Y"
+        social_links:
+                github: arthuryunze
+        show_excerpts: true
+        style: black
+        texture:
+                showNav: true
 plugins:
   - jekyll-feed
 
