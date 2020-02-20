@@ -1,3 +1,7 @@
+---
+description: 给GitHub Pages添加数学公式支持(Mathjax)
+categories: Github math
+---
 首先介绍一下Mathjax,一个开源js引擎,用于在浏览器中显示数学公式.
 
 Mathjax
