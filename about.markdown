@@ -4,9 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Yunze Li
+About me
+---
 
-Studying at Agricultural University of Hebei(AUH)
+### Yunze Li
+
+Student.
 
 Major in Computer Science.
 

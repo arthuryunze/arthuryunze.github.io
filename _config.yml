@@ -40,8 +40,7 @@ texture:
                 github: arthuryunze
         show_excerpts: true
         style: black
-        texture:
-                showNav: true
+        showNav: true
 plugins:
   - jekyll-feed
 
