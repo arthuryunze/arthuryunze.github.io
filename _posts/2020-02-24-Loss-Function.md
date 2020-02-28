@@ -1,6 +1,6 @@
 ---
-categories: ML mxnet
-description: learn Face Detection(MTCNN) with Deep Learning 2
+categories: ML
+description: learn loss function
 ---
 
 What’s a Loss Function?
@@ -46,9 +46,12 @@ Loss Functions and Optimizers
 理解：
 loss func 算偏差的
 optimizer algorithm 调参 优化偏差的
-机器学习： 拟合一个高维函数的过程
-loss反馈 oa调整
+监督机器学习： 就是拟合一个高维函数的过程  
+loss反馈 oa调整  
 归纳整理
+
+如果一昧的降低上面的误差值(损失函数)，最终可能过拟合，也就是为了迎合给出的训练集特意变成的那个样子  
+所以增加了一个正则化损失，用来强迫模型变得简单一些，不能像具体的情况那么复杂。
 
 Reference：
 ---
