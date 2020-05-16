@@ -11,9 +11,11 @@ this is `-----` title
 this is test
 -----------------
 
-
 `>` 引用内容  
 
 `>>` 嵌套引用
 
 `**加粗内容**` 加粗
+
+`![AltText](/path/to/img.jpg)` 插入图片
+![这是张图片](https://miro.medium.com/max/1400/0*mf-atTScFpQFQJbL.png)
