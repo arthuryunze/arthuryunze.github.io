@@ -3,7 +3,7 @@ catagories: 运维
 description: LAMP安装配置
 ---
 
-# Ubuntu+apache2+MySQL8环境PHP升级版本（无缝升级）
+这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。
 
 ## 原因
 
