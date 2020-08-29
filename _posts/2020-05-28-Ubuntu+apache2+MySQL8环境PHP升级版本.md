@@ -16,12 +16,9 @@ Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MyS
 
 ## 解决方案
 
-（期间尝试了
-> 修改my.cnf，发现没有这个文件，而且添加文件修改了之后也没有效果[1]
-> 修改账户密码加密方式，修改后无效果[2]
-
-
-
+> 找到解决方案前尝试了
+> 1. 修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果  
+> 2. 修改账户密码加密方式，修改后无效果
 
 添加PHP源，这个时候PHP版本最新是7.4版本。
 
@@ -51,13 +48,13 @@ Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MyS
 
 ---
 
-reference：
+Reference：
 
 [(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客](https://blog.csdn.net/weixin_40208575/article/details/84961976)
 
 [SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园](https://www.cnblogs.com/cndavidwang/p/9357684.html)
 
-[Ubuntu PHP7.0 升级到 7.1 | Laravel China 社区](https://learnku.com/articles/6845/ubuntu-php70-upgrade-to-71)
+[Ubuntu PHP7.0 升级到 7.1 Laravel China 社区](https://learnku.com/articles/6845/ubuntu-php70-upgrade-to-71)
 
 [(11条消息)PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client_php_xiaoxinshuaiga的博客-CSDN博客](https://blog.csdn.net/xiaoxinshuaiga/article/details/82798919)
 
