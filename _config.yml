@@ -30,18 +30,73 @@ github_username:  arthuryunze
 
 # Build settings
 # theme: minima
-theme: texture
-texture:
-        title: Yunze's Blog
-        tagline: Student, Developer
-        data_format: "%b %-d, %Y"
-        social_links:
-                github: arthuryunze
-        show_excerpts: true
-        style: black
-        showNav: true
+
+# permalink: /posts/:title/
+# theme: texture
+# texture:
+#         title: Yunze's Blog
+#         tagline: Student, Developer
+#         data_format: "%b %-d, %Y"
+#         social_links:
+#                 github: arthuryunze
+#         show_excerpts: true
+#         style: black
+#         showNav: true
+
+# markdown:          kramdown
+# kramdown:
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   enable_coderay: false
+site: Sidey
+permalink: pretty
+
+highlighter: none
+
+exclude:
+  - .jekyll-cache
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap  
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
