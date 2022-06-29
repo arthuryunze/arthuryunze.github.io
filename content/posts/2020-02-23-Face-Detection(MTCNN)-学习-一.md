@@ -1,4 +1,10 @@
 ---
+title: "Face-Detection(MTCNN)"
+date: 2020-02-23T16:57:58+08:00
+draft: false
+---
+
+---
 categories: ML mxnet
 description: learn Face Detection(MTCNN) with Deep Learning 1
 ---

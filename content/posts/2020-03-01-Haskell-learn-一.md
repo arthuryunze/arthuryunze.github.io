@@ -1,4 +1,10 @@
 ---
+title: "Haskell-learn-一"
+date: 2020-03-01T16:57:58+08:00
+draft: false
+---
+
+---
 categories: ProgramLanguage Haskell
 description: Function program learning
 ---

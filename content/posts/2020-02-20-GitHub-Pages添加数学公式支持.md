@@ -1,4 +1,10 @@
 ---
+title: "GitHub-Pages添加数学公式支持"
+date: 2020-02-20T16:57:58+08:00
+draft: false
+---
+
+---
 description: 给GitHub Pages添加数学公式支持(Mathjax)
 categories: Github math
 ---

@@ -1,4 +1,10 @@
 ---
+title: "Loss-Function"
+date: 2020-02-24T16:57:58+08:00
+draft: false
+---
+
+---
 categories: ML
 description: learn loss function
 ---

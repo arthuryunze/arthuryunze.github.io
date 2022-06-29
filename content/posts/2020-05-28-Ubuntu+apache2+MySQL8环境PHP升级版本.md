@@ -1,4 +1,10 @@
 ---
+title: "Ubuntu+apache2+MySQL8环境PHP升级版本"
+date: 2020-05-28T16:57:58+08:00
+draft: false
+---
+
+---
 catagories: 运维
 description: LAMP安装配置
 ---

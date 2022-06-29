@@ -1,3 +1,9 @@
+---
+title: "使Google搜索引擎收录自己的Github Page博客"
+date: 2021-03-13T16:57:58+08:00
+draft: false
+---
+
 # 使Google搜索引擎收录自己的Github Page博客
 
 ## 登陆Google收录地址
