@@ -1,1 +1,201 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yunze's blog</title><link>https://arthuryunze.github.io/</link><description>Recent content on Yunze's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Jun 2022 16:57:58 +0800</lastBuildDate><atom:link href="https://arthuryunze.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://arthuryunze.github.io/posts/my-first-post/</link><pubDate>Wed, 29 Jun 2022 16:57:58 +0800</pubDate><guid>https://arthuryunze.github.io/posts/my-first-post/</guid><description>hello head here hello here</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yunze's blog</title><link>https://arthuryunze.github.io/</link><description>Recent content on Yunze's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Jun 2022 16:57:58 +0800</lastBuildDate><atom:link href="https://arthuryunze.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://arthuryunze.github.io/posts/my-first-post/</link><pubDate>Wed, 29 Jun 2022 16:57:58 +0800</pubDate><guid>https://arthuryunze.github.io/posts/my-first-post/</guid><description>hello head here hello here</description></item><item><title>Month Names</title><link>https://arthuryunze.github.io/posts/2019-08-02-month-names/</link><pubDate>Fri, 02 Aug 2019 17:49:01 +0800</pubDate><guid>https://arthuryunze.github.io/posts/2019-08-02-month-names/</guid><description>Where do the month names come from?
+Name Comes form Who or what? Why? January Janus God of Doors This month opens the year. February februo purify This was a Roman month of sacrifices and purification. March Mars God of War Start of year for soldiers (no fighting during winter) April aperire open This is the month when trees open their leaves. May Maia Goddess of Growth This is the month when plants really start to grow.</description></item><item><title>What Do A.M. And P.M. Stand For?</title><link>https://arthuryunze.github.io/posts/2019-08-02-what-do-a.m.-and-p.m.-stand-for/</link><pubDate>Fri, 02 Aug 2019 17:49:01 +0800</pubDate><guid>https://arthuryunze.github.io/posts/2019-08-02-what-do-a.m.-and-p.m.-stand-for/</guid><description>Most English speakers know that a.m. refers to the hours from midnight and noon, and p.m. to the hours from noon and midnight. But what do these ubiquitous abbreviations stand for?
+The term we associate with the morning, a.m., is an abbreviation the Latin phrase ante merīdiem meaning “before midday”; p.m. is an abbreviation of post merīdiem, meaning—you guessed it—“after midday.” These two terms help keep ambiguity at bay in the 12-hour time system.</description></item><item><title>dos2unix-Unix, Linux Command</title><link>https://arthuryunze.github.io/posts/2019-07-18-dos2unix-unixlinux-command/</link><pubDate>Thu, 18 Jul 2019 17:49:01 +0800</pubDate><guid>https://arthuryunze.github.io/posts/2019-07-18-dos2unix-unixlinux-command/</guid><description>NAME dos2unix - DOS/MAC to UNIX text file format converter
+DESCRIPTION The program that converts plain text files in DOS/MAC format to UNIX format.
+命令介绍 dos2unix命令用来将DOS格式的文本文件转换成UNIX格式的（DOS/MAC to UNIX text file format converter）。DOS下的文本文件是以\r\n作为断行标志的，表示成十六进制就是0D 0A。而Unix下的文本文件是以\n作为断行标志的，表示成十六进制就是 0A。DOS格式的文本文件在Linux底下，用较低版本的vi打开时行尾会显示^M，而且很多命令都无法很好的处理这种格式的文件，如果是个shell脚本，。而Unix格式的文本文件在Windows下用Notepad打开时会拼在一起显示。因此产生了两种格式文件相互转换的需求，对应的将UNIX格式文本文件转成成DOS格式的是unix2dos命令。
+常用参数 将DOS格式文本文件转换成Unix格式，最简单的用法就是dos2unix直接跟上文件名。
+格式：dos2unix file
+如果一次转换多个文件，把这些文件名直接跟在dos2unix之后。（注：也可以加上-o参数，也可以不加，效果一样）
+格式：dos2unix file1 file2 file3
+格式：dos2unix -o file1 file2 file3
+上面在转换时，都会直接在原来的文件上修改，如果想把转换的结果保存在别的文件，而源文件不变，则可以使用-n参数。
+格式：dos2unix oldfile newfile
+如果要保持文件时间戳不变，加上-k参数。所以上面几条命令都是可以加上-k参数来保持文件时间戳的。
+格式：dos2unix -k file
+格式：dos2unix -k file1 file2 file3
+格式：dos2unix -k -o file1 file2 file3
+格式：dos2unix -k -n oldfile newfile</description></item><item><title>Welcome to Jekyll!</title><link>https://arthuryunze.github.io/posts/2019-07-15-welcome-to-jekyll/</link><pubDate>Mon, 15 Jul 2019 17:49:01 +0800</pubDate><guid>https://arthuryunze.github.io/posts/2019-07-15-welcome-to-jekyll/</guid><description>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
+To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-13-markdown%E8%AF%AD%E6%B3%95/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-13-markdown%E8%AF%AD%E6%B3%95/</guid><description>this is ======title this is ----- title this is test &amp;gt; 引用内容
+&amp;gt;&amp;gt; 嵌套引用
+**加粗内容** 加粗
+![AltText](/path/to/img.jpg) 插入图片</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-19-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-19-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid><description>项目提交时: git add -A 提交所有变化 git add -u 提交被修改(modified)和被删除(deleted)文件，不包括新文件(new) git add . 提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件 git pull 拉取远程仓库,覆盖本地文件,本地其它改动不会受到影响.
+项目更改时: git commit -m &amp;quot;本功能全部完成&amp;quot; 提交后
+若需要撤回commit并保留代码
+可执行 git reset --soft HEAD^ 以撤销上次commit
+HEAD^的意思是上一个版本，也可以写成HEAD~1
+如果进行了2次commit，想都撤回，可以使用HEAD~2
+几个参数:
+--mixed
+不删除工作空间改动代码，撤销commit，并且撤销git add . 操作 这个为默认参数,即 git reset --mixed HEAD^ 和 git reset HEAD^ 效果是一样的。 --soft
+不删除工作空间改动代码，撤销commit，不撤销git add . --hard
+删除工作空间改动代码，撤销commit，撤销git add . 注意完成这个操作后，就恢复到了上一次的commit状态。
+如果commit注释写错了，只是想改一下注释，只需要: git commit --amend
+此时会进入默认vim编辑器，修改注释完毕后保存就好了。
+项目拉取时 git pull 不带任何参数，拉取当前分支。
+问题 fatal: refusing to merge unrelated histories</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-20-github-pages%E6%B7%BB%E5%8A%A0%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%94%AF%E6%8C%81/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-20-github-pages%E6%B7%BB%E5%8A%A0%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%94%AF%E6%8C%81/</guid><description>首先介绍一下Mathjax，Mathjax是一个开源js引擎，用于在浏览器中显示数学公式.
+Mathjax MathJax | Beautiful math in all browsers.
+A JavaScript display engine for mathematics that works in all browsers.
+No more setup for readers. It just works.
+适用于所有浏览器的数学JavaScript显示引擎。
+不需要更多的设置就可以工作。
+在GitHub Pages中的设置方法 找到自己jekll的主题配置文件，一般配置文件在本机主目录~/gems/gems/对应的主题路径下。(若使用remote_theme模式，可以到相应主题的GitHub主页copy相关文件。) 例如本Blog使用的thelehhman/texture主题，一般来说，_layout路径下可以配置各种页面的样式，可以看到其中每个配置文件都引入了_include路径下的head.html文件，为了我们在各种页面中都可以使用数学公式，可以在header.html文件中更改&amp;lt;head&amp;gt;就可以更改每种页面的样式.
+(如果希望只在部分页面使用Mathjax，可更改_layout路径下相应的文件。) 在MathJax官网中，找到它的js脚本配置如下: &amp;lt;script src=&amp;#34;https://polyfill.io/v3/polyfill.min.js?features=es6&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script id=&amp;#34;MathJax-script&amp;#34; async src=&amp;#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 由于Mathjax源码设置在国外服务器，直接添加此代码会导致在国内打开网页速度变得巨慢，所以，我们可以使用国内托管的Mathjax源码服务器，或者在有服务器的条件下自己搭建镜像服务器.
+在这里找到了国内的一个托管服务器，mathjax | BootCDN - Bootstrap 中文网开源项目免费 CDN 加速服务
+用此网站提供的地址替换掉上面代码的地址. 此时，在markdown文件中是只支持单行公式的，出于方便考虑，我们需要添加$ 公式 $ 的行内公式，添加相关配置后最终代码如下. &amp;lt;script src=&amp;#34;https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34; type=&amp;#34;text/javascript&amp;#34;&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;script type=&amp;#34;text/x-mathjax-config&amp;#34;&amp;gt; MathJax.Hub.Config({ tex2jax: { skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;], inlineMath: [[&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;]] } }); &amp;lt;/script&amp;gt; 将其复制到对应html文件中即可使用.</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-20-mxnet%E5%AD%A6%E4%B9%A0-%E4%B8%80/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-20-mxnet%E5%AD%A6%E4%B9%A0-%E4%B8%80/</guid><description>系统环境：
+Windows10
+python3
+MXNet v1.5.1 cpu版本
+Anaconda jupyterLab 1.2.6
+国际惯例，从mnist数据集开始。
+Loading Data——导入mnist手写体数据集 import mxnet as mx # Fixing the random seed mx.random.seed(42) mnist = mx.test_utils.get_mnist() 注意，Windows环境下，运行完成后将在当前目录下载四个.qz格式文件，若下载被中断，则无法运行后续代码。
+解决方法：删除不完整的.qz文件从新下载。Linux系统下该文件位置在~/.keras/datasets路径下，使用命令rm -rf &amp;quot;dataset name&amp;quot;删除。
+# 训练批次 batch_size = 100 # 初始化两个迭代器，一个用于训练数据，另一个用于测试数据。 train_data = mx.io.NDArrayIter(mnist[&amp;#39;train_data&amp;#39;], mnist[&amp;#39;train_label&amp;#39;], batch_size, shuffle=True) val_data = mx.io.NDArrayIter(mnist[&amp;#39;test_data&amp;#39;], mnist[&amp;#39;test_label&amp;#39;], batch_size) MXNet Data iterators： MXNet数据迭代器
+对于大批量数据，不可能预加载整个数据集，MXNet Data iterators可将输入数据流式传输到MXNet训练算法中。
+一个批次的图像通常表示为一个4维数组(batch_size, num_channels, width, height)
+Approaches——方法(CNN) CNN主要由两种网络层构成：
+卷积层和池化层
+卷积层 单个卷积层由一个或多个过滤器组成，每个过滤器起*特征检测器(feature detector)*的作用。
+在训练过程中，CNN学习这些过滤器的适当表示形式(参数)。
+CNN通过应用非线性函数对卷积层的输出进行转换(transform)。
+池化层 A pooling layer serves to make the CNN translation invariant</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-20-softmax%E5%87%BD%E6%95%B0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-20-softmax%E5%87%BD%E6%95%B0/</guid><description>Softmax函数 在数学，尤其是概率论和相关领域中，Softmax函数，或称归一化指数函数，是逻辑函数的一种推广。它能将一个含任意实数的K维向量z “压缩”到另一个K维实向量$ \sigma{z} $中，使得每一个元素的范围都在(0,1)之间，并且所有元素的和为1(也可视为一个 (k-1)维的hyperplan，因为总和为1，所以是subspace)。该函数的形式通常按下面的式子给出：
+$$ {\displaystyle \sigma (\mathbf {z} ){j}={\frac {e^{z{j}}}{\sum {k=1}^{K}e^{z{k}}}}} for j = 1, …, K. $$
+Python example：
+&amp;gt;&amp;gt;&amp;gt; import numpy as np &amp;gt;&amp;gt;&amp;gt; a = [1.0, 2.0, 3.0, 4.0, 1.0, 2.0, 3.0] &amp;gt;&amp;gt;&amp;gt; np.exp(a) / np.sum(np.exp(a)) array([0.02364054, 0.06426166, 0.1746813, 0.474833, 0.02364054,0.06426166, 0.1746813]) Reference: Softmax函数 - 维基百科，自由的百科全书</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-21-mxnet%E5%AD%A6%E4%B9%A0-%E4%BA%8C/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-21-mxnet%E5%AD%A6%E4%B9%A0-%E4%BA%8C/</guid><description>在上一节，我们已经搭好了LeNet。
+现在，我们要开始使用数据训练这个网络，以使它找到合适的参数。
+我们将使用超参数训练LeNet。
+若使用GPU进行运算，我们只需要将mx.cpu()更改为mx.gpu()，而MXNet会处理其余的工作。我们将在10个时间段(epoch)后停止训练。
+建议使用GPU进行运算，LeNet比MLP(多层感知机)更复杂，计算量更大。GPU可大大加快计算速度。
+为了方便，我的环境使用了CPU版本的MXNet。速度会稍慢，但不影响后续代码。
+注意CPU版本和GPU版本安装时是不同的，安装步骤可以查看MXNet官网。
+Initialize parameters and optimizer——初始化参数和优化器 初始化网络参数如下：
+# set the context on GPU is available otherwise CPU ctx = [mx.gpu() if mx.test_utils.list_gpus() else mx.cpu()] net.initialize(mx.init.Xavier(magnitude=2.24), ctx=ctx) trainer = gluon.Trainer(net.collect_params(), &amp;#39;sgd&amp;#39;, {&amp;#39;learning_rate&amp;#39;: 0.03}) Training——训练 # Use Accuracy as the evaluation metric. metric = mx.metric.Accuracy() softmax_cross_entropy_loss = gluon.loss.SoftmaxCrossEntropyLoss() for i in range(epoch): # Reset the train data iterator. train_data.reset() # Loop over the train data iterator. for batch in train_data: # Splits train data into multiple slices along batch_axis # and copy each slice into a context.</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-23-face-detectionmtcnn-%E5%AD%A6%E4%B9%A0-%E4%B8%80/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-23-face-detectionmtcnn-%E5%AD%A6%E4%B9%A0-%E4%B8%80/</guid><description>Face Detection 人脸检测 对于人类而言，这是一个微不足道的问题，近来也已经被经典的基于特征的技术（例如级联分类器）合理地解决了。最近，深度学习方法已在标准的基准人脸检测数据集上取得了最先进的结果。一个例子是多任务级联卷积神经网络(Multi-task Cascade Convolutional Neural Network)，简称MTCNN。
+MTCNN网络结构 该网络使用具有三个网络的级联结构。 首先将图像缩放到不同大小的范围（称为图像金字塔），然后第一个模型（建议网络或P-Net）提出候选的面部区域，第二个模型（Refine网络或R-Net）过滤边界框 ，第三个模型（输出网络或O-Net）提出了人脸标志。
+第一个网络是一个浅层神经网络（后简称pnet） =&amp;gt; 产生初步候选框 第二个网络是一个“more complex CNN“相较pnet更为复杂的网络（后简称rnet）=&amp;gt; 从初步候选框中筛选掉大量的不包括人脸的框
+第三个网络是一个“more powerful CNN”相较rnet更为强大的网络（后简称onet）=&amp;gt; 进一步优化结果以及产生五个面部特征点（双眼，鼻尖，嘴角）
+mtcnn库 GitHub上发现，已经有同学做好了MTCNN相应的库
+ipazc/mtcnn: MTCNN face detection implementation for TensorFlow, as a PIP package.
+我们先简单使用一下：
+用笔记本自带摄像头拍摄一张照片，用opencv库导入。
+from mtcnn import MTCNN import cv2 img = cv2.cvtColor(cv2.imread(&amp;#34;WIN_20200223_17_44_49_Pro.jpg&amp;#34;), cv2.COLOR_BGR2RGB) detector = MTCNN() detector.detect_faces(img) 我们可以得到一个list格式的数据
+[{&amp;#39;box&amp;#39;: [480, 214, 234, 309], &amp;#39;confidence&amp;#39;: 0.9999535083770752, &amp;#39;keypoints&amp;#39;: {&amp;#39;left_eye&amp;#39;: (536, 330), &amp;#39;right_eye&amp;#39;: (643, 334), &amp;#39;nose&amp;#39;: (583, 402), &amp;#39;mouth_left&amp;#39;: (543, 453), &amp;#39;mouth_right&amp;#39;: (633, 456)}}] 从这个list可以看出</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-24-loss-function/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-24-loss-function/</guid><description>What’s a Loss Function? 什么是损失函数？
+At its core, a loss function is incredibly simple: it’s a method of evaluating how well your algorithm models your dataset.
+损失函数的核心非常简单：它是评价你的算法效果有多好的方法。
+Different Types and Flavors of Loss Functions A lot of the loss functions that you see implemented in machine learning can get complex and confusing. Consider this paper from late 2017, entitled A Semantic Loss Function for Deep Learning with Symbolic Knowledge. There’s more in that title that I don’t understand than I do.</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-02-28-machinelearning%E5%9F%BA%E7%A1%80-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-02-28-machinelearning%E5%9F%BA%E7%A1%80-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid><description>线性回归 线性模型 基本形式 线性模型(Linear model)试图学得一个通过属性的线性组合来进行预测的函数，即
+$$ f(x)=w_1x_1+w_2x_2+&amp;hellip;+w_dx_d+b $$
+一般用向量形式写成
+$$ f(x)=w^Tx+b $$
+其中$ w=(w_1;w_2;&amp;hellip;;w_d) $.w和b学得之后，模型就得以确定。
+线性模型有很好的可解释性。
+线性回归 &amp;ldquo;线性回归&amp;rdquo; (linear regression)试图学得一个线性模型以尽可能准确地预测实值输出标记。
+均方误差(2.2) 是回归任务中最常用的性能度量
+均方误差有非常好的几何意义。它对应了常用的欧几里得距离或简称&amp;quot;欧氏距离&amp;quot; (Euclidean distance). 基于均方误差最小化来进行模型求解的方法称为&amp;quot;最小二乘法&amp;quot; (least squ町e method).
+在线性回归中，最小二乘法就是试图找到一条直线，使所有样本到直线上的欧氏距离之和最小.
+求解w,b过程，称为线性回归模型的最小二乘&amp;quot;参数估计&amp;quot; (parameter estimation).
+凸函数的任何极小值也是最小值。严格凸函数最多有一个最小值。 凸函数 - 维基百科，自由的百科全书
+两种算法：
+经典算法——最小二乘法 深度学习——梯度下降法 用两种方法分别实现了线性回归 项目传到GitHub Learn_MXNet/LinearRegression.ipynb at master · arthuryunze/Learn_MXNet 线性回归理解（附纯python实现）_Python_快来学习鸭～～～-CSDN博客</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-03-01-haskell-learn-%E4%B8%80/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-03-01-haskell-learn-%E4%B8%80/</guid><description>Types and Typeclasses ghci 交互式shell中，:t判断变量类型。
+:t &amp;#39;a&amp;#39; &amp;#39;a&amp;#39; :: Char :: is read as &amp;ldquo;has type of&amp;rdquo;.
+函数类型显式声明 一般来说，Haskell有类型推断系统，不需要我们显式声明。但是，我们定义函数时会使用显式声明的办法。
+除了编写非常短的函数之外，这通常被认为是一个好的实践。
+This is generally considered to be good practice except when writing very short functions.
+addThree :: Int -&amp;gt; Int -&amp;gt; Int -&amp;gt; Int addThree x y z = x + y + z 前三个Int是参数类型，最后一个是输出类型。 参数之间用-&amp;gt;分隔，并且参数和返回类型之间没有特殊区别。
+product [1..10] 120 1到10的乘积
+head takes a list of any type and returns the first element</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-03-05-%E6%9F%A5%E7%9C%8Blinux%E7%A3%81%E7%9B%98%E5%8F%8A%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-03-05-%E6%9F%A5%E7%9C%8Blinux%E7%A3%81%E7%9B%98%E5%8F%8A%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8/</guid><description>查看Linux磁盘及内存占用 查看磁盘占用 df -k：以KB为单位显示磁盘使用量和占用率
+df -m：以Mb为单位显示磁盘使用量和占用率
+查看内存占用 1.top
+PID：当前运行进程的ID USER：进程属主 PR：每个进程的优先级别 NInice：反应一个进程“优先级”状态的值，其取值范围是-20至19，一 共40个级别。这个值越小，表示进程”优先级”越高，而值越 大“优先级”越低。一般会把nice值叫做静态优先级 VIRT：进程占用的虚拟内存 RES：进程占用的物理内存 SHR：进程使用的共享内存 S：进程的状态。S表示休眠，R表示正在运行，Z表示僵死状态，N表示 该进程优先值为负数 %CPU：进程占用CPU的使用率 %MEM：进程使用的物理内存和总内存的百分比 TIME+：该进程启动后占用的总的CPU时间，即占用CPU使用时间的累加值。 COMMAND：进程启动命令名称
+２.free
+total : 总计物理内存的大小。 used : 已使用多大。 free : 可用有多少。 Shared : 多个进程共享的内存总额。 Buffers/cached : 磁盘缓存的大小。 -/+ buffers/cached) : used:已使用多大; free:可用有多少。
+4.ps aux –sort -rss ps aux: 列出目前所有的正在内存当中的程序。</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-03-15-socket%E7%BC%96%E7%A8%8B-%E4%B8%80/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-03-15-socket%E7%BC%96%E7%A8%8B-%E4%B8%80/</guid><description>什么是socket? 在计算机通信领域，socket 被翻译为“套接字”，它是计算机之间进行通信的一种约定或一种方式。通过 socket 这种约定，一台计算机可以接收其他计算机的数据，也可以向其他计算机发送数据。
+socket 的典型应用就是 Web 服务器和浏览器：浏览器获取用户输入的URL，向服务器发起请求，服务器分析接收到的URL，将对应的网页内容返回给浏览器，浏览器再经过解析和渲染，就将文字、图片、视频等元素呈现给用户。
+学习 socket，也就是学习计算机之间如何通信，并编写出实用的程序。
+什么是通信? IP地址和端口能够在广袤的互联网中定位到要通信的程序，协议和数据传输方式规定了如何传输数据，有了这些，两台计算机就可以通信了。
+IP地址（IP Address） 计算机分布在世界各地，要想和它们通信，必须要知道确切的位置。确定计算机位置的方式有多种，IP 地址是最常用的，例如，114.114.114.114 是国内第一个、全球第三个开放的 DNS 服务地址，127.0.0.1 是本机地址。
+其实，我们的计算机并不知道 IP 地址对应的地理位置，当要通信时，只是将 IP 地址封装到要发送的数据包中，交给路由器去处理。路由器有非常智能和高效的算法，很快就会找到目标计算机，并将数据包传递给它，完成一次单向通信。
+端口（Port） 有了 IP 地址，虽然可以找到目标计算机，但仍然不能进行通信。一台计算机可以同时提供多种网络服务，例如Web服务、FTP服务（文件传输服务）、SMTP服务（邮箱服务）等，仅有 IP 地址，计算机虽然可以正确接收到数据包，但是却不知道要将数据包交给哪个网络程序来处理，所以通信失败。
+为了区分不同的网络程序，计算机会为每个网络程序分配一个独一无二的端口号（Port Number），例如，Web服务的端口号是 80，FTP 服务的端口号是 21，SMTP 服务的端口号是 25。
+协议（Protocol） 协议（Protocol）就是网络通信的约定，通信的双方必须都遵守才能正常收发数据。协议有很多种，例如 TCP、UDP、IP 等，通信的双方必须使用同一协议才能通信。协议是一种规范，由计算机组织制定，规定了很多细节，例如，如何建立连接，如何相互识别等。
+协议仅仅是一种规范，必须由计算机软件来实现。例如 IP 协议规定了如何找到目标计算机，那么各个开发商在开发自己的软件时就必须遵守该协议，不能另起炉灶。
+所谓协议族（Protocol Family），就是一组协议（多个协议）的统称。最常用的是 TCP/IP 协议族，它包含了 TCP、IP、UDP、Telnet、FTP、SMTP 等上百个互为关联的协议，由于 TCP、IP 是两种常用的底层协议，所以把它们统称为 TCP/IP 协议族。
+数据传输方式 计算机之间有很多数据传输方式，各有优缺点，常用的有两种：SOCK_STREAM 和 SOCK_DGRAM。
+SOCK_STREAM(数据流套接字) 表示面向连接的数据传输方式。数据可以准确无误地到达另一台计算机，如果损坏或丢失，可以重新发送，但效率相对较慢。常见的 http 协议就使用 SOCK_STREAM 传输数据，因为要确保数据的正确性，否则网页不能正常解析。
+SOCK_DGRAM(数据报套接字) 表示无连接的数据传输方式。计算机只管传输数据，不作数据校验，如果数据在传输中损坏，或者没有到达另一台计算机，是没有办法补救的。也就是说，数据错了就错了，无法重传。因为 SOCK_DGRAM 所做的校验工作少，所以效率比 SOCK_STREAM 高。</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-05-16-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E4%B8%89%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%9B%86%E8%AE%AD%E7%BB%83%E9%9B%86%E9%AA%8C%E8%AF%81%E9%9B%86%E6%B5%8B%E8%AF%95%E9%9B%86/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-05-16-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E4%B8%89%E7%A7%8D%E6%95%B0%E6%8D%AE%E9%9B%86%E8%AE%AD%E7%BB%83%E9%9B%86%E9%AA%8C%E8%AF%81%E9%9B%86%E6%B5%8B%E8%AF%95%E9%9B%86/</guid><description>机器学习中的数据集 训练集、验证集、测试集 在人工智能技术中，通常有三种常用的数据集：训练集、验证集、测试集。
+先用一个不恰当的比喻来说明3种数据集之间的关系：
+训练集相当于上课学知识 验证集相当于课后的的练习题，用来纠正和强化学到的知识 测试集相当于期末考试，用来最终评估学习效果 训练集 训练集（Training Dataset）是用来训练模型使用的。
+机器学习的七个步骤 验证集 当我们的模型训练好之后，我们并不知道他的表现如何。
+这个时候就可以使用验证集（Validation Dataset）来看看模型在新数据（验证集和测试集是不同的数据）上的表现如何。同时通过调整超参数，让模型处于最好的状态。
+验证集有2个主要的作用：
+评估模型效果，为了调整超参数而服务 调整超参数，使得模型在验证集上的效果最好 说明：
+验证集不像训练集和测试集，它是非必需的。如果不需要调整超参数，就可以不使用验证集，直接用测试集来评估效果。 验证集评估出来的效果并非模型的最终效果，主要是用来调整超参数的，模型最终效果以测试集的评估结果为准。 测试集 当我们调好超参数后，就要开始「最终考试」了。我们通过测试集（Test Dataset）来做最终的评估。
+通过测试集的评估，我们会得到一些最终的评估指标，例如：准确率、精确率、召回率、F1等。
+如何合理划分数据集 下面的数据集划分方式主要针对「留出法」的验证方式，除此之外还有其他的交叉验证法，详情见下文 — — 交叉验证法。
+数据划分的方法并没有明确的规定，不过可以参考3个原则：
+对于小规模样本集（几万量级），常用的分配比例是 60% 训练集、20% 验证集、20% 测试集。 对于大规模样本集（百万级以上），只要验证集和测试集的数量足够即可，例如有 100w 条数据，那么留 1w 验证集，1w 测试集即可。1000w 的数据，同样留 1w 验证集和 1w 测试集。 超参数越少，或者超参数很容易调整，那么可以减少验证集的比例，更多的分配给训练集。 交叉验证法 为什么要用交叉验证法？
+假如我们教小朋友学加法：1个苹果+1个苹果=2个苹果
+当我们再测试的时候，会问：1个香蕉+1个香蕉=几个香蕉？
+如果小朋友知道「2个香蕉」，并且换成其他东西也没有问题，那么我们认为小朋友学习会了「1+1=2」这个知识点。
+如果小朋友只知道「1个苹果+1个苹果=2个苹果」，但是换成其他东西就不会了，那么我们就不能说小朋友学会了「1+1=2」这个知识点。
+评估模型是否学会了「某项技能」时，也需要用新的数据来评估，而不是用训练集里的数据来评估。这种「训练集」和「测试集」完全不同的验证方法就是交叉验证法。
+3 种主流的交叉验证法 留出法（Holdout cross validation） 上文提到的，按照固定比例将数据集静态的划分为训练集、验证集、测试集。的方式就是留出法。
+留一法（Leave one out cross validation） 每次的测试集都只有一个样本，要进行 m 次训练和预测。 这个方法用于训练的数据只比整体数据集少了一个样本，因此最接近原始样本的分布。但是训练复杂度增加了，因为模型的数量与原始数据样本数量相同。 一般在数据缺乏时使用。</description></item><item><title/><link>https://arthuryunze.github.io/posts/2020-05-28-ubuntu+apache2+mysql8%E7%8E%AF%E5%A2%83php%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-05-28-ubuntu+apache2+mysql8%E7%8E%AF%E5%A2%83php%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC/</guid><description>这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。
+原因 因某次手贱升级了MySQL数据库（版本从5到8），导致MySQL与php的兼容出了问题。
+Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MySQL8新的加密方式的（caching_sha2_password），所以PHP项目在连接数据库时就会出现连接失败的问题。phpmyadmin也无法登录。
+起初以为是root的远程访问权限出了问题，因为我的root权限是只限本机的（localhost），后来通过创建新的具有远程访问权限的用户发现还是无法连接，知道了跟用户权限没关系。
+（Linux再也不随便升级东西了，有些软件升级后，废弃的特性和新的特性会影响各种配置）。
+解决方案 找到解决方案前尝试了
+修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果 修改账户密码加密方式，修改后无效果 添加PHP源，这个时候PHP版本最新是7.4版本。
+add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt upgrade php
+sudo apt install php-mysql 安装php mysql扩展。
+至此，查看phpinfo界面，发现版本还是7.0，说明服务器没有使用新的版本。
+查看apache2相关配置文件后，发现php是以插件的形式存在于apache2服务器中的（在/etc apache2 中什么mods enable路径下可以找到），可以使用命令打开关闭。
+关闭php7.0，开启php7.4。
+sudo a2dismod php7.0
+sudo a2enmod php7.4
+重启apache2服务器
+sudo service apache2 restart
+至此，服务器上的php升级完成。phpinfo页的版本也已经更新。( •̀ ω •́ )y
+Reference：
+(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客
+SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园</description></item><item><title/><link>https://arthuryunze.github.io/posts/2021-03-04-%E8%AE%B0%E5%BD%95%E5%AE%89%E8%A3%85cuda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2021-03-04-%E8%AE%B0%E5%BD%95%E5%AE%89%E8%A3%85cuda/</guid><description>记录安装cuda 获取下载命令： 进入官网
+https://developer.nvidia.com/zh-cn/cuda-downloads
+依次选择：Linux、x86、Ubuntu、20.04、runfile
+获取下载命令：
+wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run sudo sh cuda_11.1.0_455.23.05_linux.run 安装 由于已经安装了显卡驱动，因此在安装时将驱动取消打勾。
+安装完成后，显示提示。
+=========== = Summary = =========== Driver: Not Selected Toolkit: Installed in /usr/local/cuda-11.1/ Samples: Installed in /home/yunze/, but missing recommended libraries Please make sure that - PATH includes /usr/local/cuda-11.1/bin - LD_LIBRARY_PATH includes /usr/local/cuda-11.1/lib64, or, add /usr/local/cuda-11.1/lib64 to /etc/ld.so.conf and run ldconfig as root To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-11.1/bin ***WARNING: Incomplete installation! This installation did not install the CUDA Driver.</description></item><item><title/><link>https://arthuryunze.github.io/posts/2021-03-06-python%E7%94%9F%E6%88%90%E5%99%A8%E9%81%87%E5%88%B0loop%E5%9F%9F%E4%BA%A7%E7%94%9F%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2021-03-06-python%E7%94%9F%E6%88%90%E5%99%A8%E9%81%87%E5%88%B0loop%E5%9F%9F%E4%BA%A7%E7%94%9F%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>python生成器遇到loop域产生的问题 def triangles(): L = [1] while True: #为什么要加[:] yield L[:] L.append(0) if __name__ == &amp;#39;__main__&amp;#39;: # [1, 9, 36, 84, 126, 126, 84, 36, 9, 1] n = 0 results = [] # 如果L不加[:]切片，会导致此for循环先运行完再进行yield，while true中的代码会先运行十次 # 导致有10个0，这应该是对L的原地址上直接进行了修改，因此要加上[:] for t in triangles(): results.append(t) n = n + 1 if n == 10: break for t in results: print(t)</description></item><item><title/><link>https://arthuryunze.github.io/posts/2021-03-06-%E4%B8%80%E4%BA%9Bpython%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2021-03-06-%E4%B8%80%E4%BA%9Bpython%E5%9F%BA%E7%A1%80/</guid><description>python基础 下划线 单前导下划线 _var 约定俗成的含义
+以单个下划线开头的变量或方法仅供内部使用。
+即私有，这不是Python强制规定的。 Python不像Java那样在“私有”和“公共”变量之间有很强的区别。
+前置双下划线 私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）
+前后双下划线 系统定义名字（这就是在python中强大的魔法方法），因为变量名__xxx__对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。
+参数传递 如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值&amp;rsquo;来传递对象。
+python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。
+Python使用按引用传递（pass-by-reference）将参数传递到函数中。如果你改变一个函数内的参数，会影响到函数的调用。这是Python的默认操作。不过，如果我们传递字面参数，比如字符串、数字或元组，它们是按值传递，这是因为它们是不可变的。
+如何在Python中创建自己的包？ Python中创建包是比较方便的，只需要在当前目录建立一个文件夹，文件夹中包含一个__init__.py文件和若干个模块文件，其中__init__.py可以是一个空文件，但还是建议将包中所有需要导出的变量放到__all__中，这样可以确保包的接口清晰明了，易于使用。
+__all__ 只有以“from 模块名 import *”形式导入的模块，当该模块设有 __all__ 变量时，只能导入该变量指定的成员，未指定的成员是无法导入的。
+以下两种情况__all__不起作用
+以“import 模块名”的形式导入模块。 以“from 模块名 import 成员”的形式直接导入指定成员。 可变对象与不可变对象 可变对象（比如字典或者列表）
+不可变对象（比如数字、字符或者元组）
+不可变集合（frozenset） 集合是可变的。而不可变集合却不可变
+myset=frozenset([1,3,2,2]) myset 深拷贝浅拷贝 深拷贝 开辟新的内存空间
+import copy b=copy.deepcopy(a) 浅拷贝要分三种情况进行讨论 拷贝不可变对象：只是增加一个指向原对象的引用，改变会互相影响。
+拷贝可变对象(一层结构)：产生新的对象，开辟新的内存空间，改变互不影响。
+拷贝可变对象(多层结构)：产生新的对象，开辟新的内存空间，不改变包含的子对象则互不影响、改变包含的子对象则互相影响。
+&amp;gt;&amp;gt;&amp;gt; import copy &amp;gt;&amp;gt;&amp;gt; a = [1, 2, [3, 4]] &amp;gt;&amp;gt;&amp;gt; b = copy.copy(a) &amp;gt;&amp;gt;&amp;gt; b ... [1, 2, [3, 4]] # 查看两者的内存地址，不同，开辟了新的内存空间 &amp;gt;&amp;gt;&amp;gt; id(b) 1833997596488 &amp;gt;&amp;gt;&amp;gt; id(a) 1833997596424 &amp;gt;&amp;gt;&amp;gt; a is b .</description></item><item><title/><link>https://arthuryunze.github.io/posts/2021-03-13-linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2021-03-13-linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B/</guid><description>面试问题准备 Linux命令：查看端口、进程 端口：netstat -ano、lsof -i:
+进程：ps -ef
+管道及其他符号 &amp;ldquo;|&amp;quot;：管道符号 用法:
+command 1 | command 2 功能是把第一个命令command 1执行的结果作为command 2的输入传给command 2
+双竖线‘||’， 用双竖线&amp;quot;||&amp;quot;分割的多条命令，执行的时候遵循如下规则，
+如果前一条命令为真，则后面的命令不会执行，如果前一条命令为假，则继续执行后面的命令。
+举例输入1小于2双竖线输出b，前面为真，后面不执行则没有输出b，输入1大于2双竖线echo b，前面为假则输出b。
+&amp;amp;依次执行多条命令，不管命令是否执行成功 &amp;amp;&amp;amp; 可依次执行多条命令，当碰到执行错误的命令时，将不再执行后面的命令。如果一直没有错误的，则执行完毕。 白盒测试： 是测试人员要了解程序结构和处理过程,按照程序内部逻辑测试程序,检查程序中的每条通路是否按照预定要求正确工作.它主要的针对被测程序的源代码,测试着可以完全不考虑程序的功能. *白盒测试流程:* 源程序&amp;ndash;&amp;gt;分析程序内部逻辑结构&amp;ndash;&amp;gt;流程图&amp;ndash;&amp;gt;制定测试用例&amp;ndash;&amp;gt;被测程序&amp;ndash;&amp;gt;执行路径&amp;ndash;&amp;gt;覆盖情况分析 黑盒测试: 是根据功能需求来测试程序是否按照预期工作,是要从用户的角度分析.尽量发现代码所表现的外部行为的错误.黑盒测试应该是由测试团队来完成的.根据某个给定的输入,应该能够理解并详细说明程序的预期输出. 黑盒测试流程: 功能需求&amp;ndash;&amp;gt;产生测试用例&amp;ndash;&amp;gt;被测程序&amp;ndash;&amp;gt;输出实际结果&amp;ndash;&amp;gt;与预期结果比较&amp;ndash;&amp;gt;分析功能是否实现. 回归测试: 在对软件进行修正后进行的有选择的重新测试过程.一般要重复已用的测试用例.目的是检验软件在更改后所引起的错误,验证软件在修改后未引起不希望的有害效果.
+自我介绍 如何自我介绍（语气要抑扬顿挫，神态要声情并茂，不能机械的没有感情的背） 一般人的自我介绍过于平常，只说姓名、年龄、爱好、工作经验，这些在简历上都有，其实，企业最希望知道的是求职者能否胜任工作，包括：最强的技能、最深入研究的知识领域、个性中最积极的部分、做过的最成功的事，主要的成就等
+您好（下午好/上午好），我15年毕业，大学所学的专业是计算机，毕业之后来到北京，一开始在一家创业型团队起步，当时主力开发语言是python，版本号我记得还很清楚是python2.7，在公司主要和业务打交道（这里可以简单谈一下主营业务，也可以不谈），大概沉淀了两年左右吧，我跳槽到了（你主要包装的第二家大厂），薪酬实现了double，在新的技术团队里，我接触到了微服务架构思想，使用thrift框架写后台接口，同时技术栈也越来越丰富，前端技术也有所涉猎，比如vue框架，先进的数据双向绑定理念，同时也学习了在业务解耦和服务封装层面比较流行的docker容器技术，这项技术使我平时开发和测试工作都提高了效率，最近一年左右吧，我经常使用的web框架是tornado,这个框架我个人非常喜欢，它的异步非阻塞特性让我对异步编程思想的认识更深入了。其实三四年下来，做过的东西解决过的问题也挺多的，待过大公司也经历过小团队，给我的感觉就是互联网企业随着发展，技术和行业边界其实是越来越模糊的，也就是说技术都是具有相通性的，我个人来讲，优势就是技术涉猎比较广，前后端都接触过，踩得坑也比较多，在特定领域有一定的深入，比如异步编程这块。另外我觉得搞开发的，学习能力，总结能力很重要，所以我一直保持着写技术博客的习惯，这样经过沉淀，可以提高一个人的分析能力，也就是解决问题的能力，我的介绍完了，谢谢。
+“本人在校期间通过有关python、机器学习、深度学习、图像识别等方面的书籍以及CSDN博客、b站的视频、知乎以及七月在线机器学习课程进行学习。学习的内容流程大致为：python基础的语法&amp;mdash;-numpy、pandas、matplotlib、time等库的应用&amp;mdash;-常用的机器学习模型（如LR、SVM、树模型、常用的聚类算法等）&amp;mdash;-BP神经网络&amp;mdash;-CNN、RNN、LSTM等网络&amp;mdash;-VGG、Resnet等物体检测backbone&amp;mdash;-RCNN系列、Yolo系列、SSD系列物体检测方法&amp;mdash;-近几年物体检测方向的论文等。 ———————————————— 版权声明：本文为CSDN博主「v_JULY_v」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/v_JULY_v/article/details/109991373
+您好（下午好/上午好），我是河北农业大学20年毕业生，大学所学的专业是计算机科学与技术，毕业之后来
+其实三四年下来，做过的东西解决过的问题也挺多的，待过大公司也经历过小团队，我个人来讲，优势就是技术涉猎比较广，前后端都接触过，踩得坑也比较多，在特定领域有一定的深入，比如异步编程这块。另外我觉得搞开发的，学习能力，总结能力很重要，所以我一直保持着写技术博客的习惯，这样经过沉淀，可以提高一个人的分析能力，也就是解决问题的能力，我的介绍完了，谢谢。
+reference 实训_自我介绍以及知识点串联 | python高频面试题，以及面试话术总结
+等</description></item><item><title/><link>https://arthuryunze.github.io/posts/2021-03-13-%E4%BD%BFgoogle%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%94%B6%E5%BD%95%E8%87%AA%E5%B7%B1%E7%9A%84github-page%E5%8D%9A%E5%AE%A2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2021-03-13-%E4%BD%BFgoogle%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%94%B6%E5%BD%95%E8%87%AA%E5%B7%B1%E7%9A%84github-page%E5%8D%9A%E5%AE%A2/</guid><description>使Google搜索引擎收录自己的Github Page博客 登陆Google收录地址 https://search.google.com/search-console/welcome
+手动设置站点地图 选择右边网址前缀选项，填入github page地址，然后把生成的html文件放到博客index同级路径下，发布到github page，校验一下，需要等待一天左右。
+reference github pages 如何被google收录 | Byte的博客</description></item></channel></rss>

@@ -1,0 +1,34 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>ML MXNet | Yunze's blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content><meta name=generator content="Hugo 0.101.0"><meta name=robots content="noindex, nofollow"><link rel=stylesheet href=/ananke/css/main.min.css><link href=/categories/ml-mxnet/index.xml rel=alternate type=application/rss+xml title="Yunze's blog"><link href=/categories/ml-mxnet/index.xml rel=feed type=application/rss+xml title="Yunze's blog"><meta property="og:title" content="ML MXNet"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://arthuryunze.github.io/categories/ml-mxnet/"><meta itemprop=name content="ML MXNet"><meta itemprop=description content><meta name=twitter:card content="summary"><meta name=twitter:title content="ML MXNet"><meta name=twitter:description content></head><body class="ma0 avenir bg-near-white"><header><div class="pb3-m pb6-l bg-black"><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib">Yunze's blog</a><div class="flex-l items-center"><div class=ananke-socials></div></div></div></nav><div class="tc-l pv3 ph3 ph4-ns"><h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">ML MXNet</h1></div></div></header><main class=pb7 role=main><article class="cf pa3 pa4-m pa4-l"><div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray"><p>Below you will find pages that utilize the taxonomy term “ML MXNet”</p></div></article><div class="mw8 center"><section class="flex-ns flex-wrap justify-around mt5"><div class="relative w-100 mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height"><div class="bg-white mb3 pa4 gray overflow-hidden"><span class="f6 db">Posts</span><h1 class="f3 near-black"><a href=/posts/2020-02-20-mxnet%E5%AD%A6%E4%B9%A0-%E4%B8%80/ class="link black dim"></a></h1><div class="nested-links f5 lh-copy nested-copy-line-height">系统环境：
+Windows10
+python3
+MXNet v1.5.1 cpu版本
+Anaconda jupyterLab 1.2.6
+国际惯例，从mnist数据集开始。
+Loading Data——导入mnist手写体数据集 import mxnet as mx # Fixing the random seed mx.random.seed(42) mnist = mx.test_utils.get_mnist() 注意，Windows环境下，运行完成后将在当前目录下载四个.qz格式文件，若下载被中断，则无法运行后续代码。
+解决方法：删除不完整的.qz文件从新下载。Linux系统下该文件位置在~/.keras/datasets路径下，使用命令rm -rf "dataset name"删除。
+# 训练批次 batch_size = 100 # 初始化两个迭代器，一个用于训练数据，另一个用于测试数据。 train_data = mx.io.NDArrayIter(mnist['train_data'], mnist['train_label'], batch_size, shuffle=True) val_data = mx.io.NDArrayIter(mnist['test_data'], mnist['test_label'], batch_size) MXNet Data iterators： MXNet数据迭代器
+对于大批量数据，不可能预加载整个数据集，MXNet Data iterators可将输入数据流式传输到MXNet训练算法中。
+一个批次的图像通常表示为一个4维数组(batch_size, num_channels, width, height)
+Approaches——方法(CNN) CNN主要由两种网络层构成：
+卷积层和池化层
+卷积层 单个卷积层由一个或多个过滤器组成，每个过滤器起*特征检测器(feature detector)*的作用。
+在训练过程中，CNN学习这些过滤器的适当表示形式(参数)。
+CNN通过应用非线性函数对卷积层的输出进行转换(transform)。
+池化层 A pooling layer serves to make the CNN translation invariant</div></div></div></div><div class="relative w-100 mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height"><div class="bg-white mb3 pa4 gray overflow-hidden"><span class="f6 db">Posts</span><h1 class="f3 near-black"><a href=/posts/2020-02-21-mxnet%E5%AD%A6%E4%B9%A0-%E4%BA%8C/ class="link black dim"></a></h1><div class="nested-links f5 lh-copy nested-copy-line-height">在上一节，我们已经搭好了LeNet。
+现在，我们要开始使用数据训练这个网络，以使它找到合适的参数。
+我们将使用超参数训练LeNet。
+若使用GPU进行运算，我们只需要将mx.cpu()更改为mx.gpu()，而MXNet会处理其余的工作。我们将在10个时间段(epoch)后停止训练。
+建议使用GPU进行运算，LeNet比MLP(多层感知机)更复杂，计算量更大。GPU可大大加快计算速度。
+为了方便，我的环境使用了CPU版本的MXNet。速度会稍慢，但不影响后续代码。
+注意CPU版本和GPU版本安装时是不同的，安装步骤可以查看MXNet官网。
+Initialize parameters and optimizer——初始化参数和优化器 初始化网络参数如下：
+# set the context on GPU is available otherwise CPU ctx = [mx.gpu() if mx.test_utils.list_gpus() else mx.cpu()] net.initialize(mx.init.Xavier(magnitude=2.24), ctx=ctx) trainer = gluon.Trainer(net.collect_params(), 'sgd', {'learning_rate': 0.03}) Training——训练 # Use Accuracy as the evaluation metric. metric = mx.metric.Accuracy() softmax_cross_entropy_loss = gluon.loss.SoftmaxCrossEntropyLoss() for i in range(epoch): # Reset the train data iterator. train_data.reset() # Loop over the train data iterator. for batch in train_data: # Splits train data into multiple slices along batch_axis # and copy each slice into a context.</div></div></div></div><div class="relative w-100 mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height"><div class="bg-white mb3 pa4 gray overflow-hidden"><span class="f6 db">Posts</span><h1 class="f3 near-black"><a href=/posts/2020-02-23-face-detectionmtcnn-%E5%AD%A6%E4%B9%A0-%E4%B8%80/ class="link black dim"></a></h1><div class="nested-links f5 lh-copy nested-copy-line-height">Face Detection 人脸检测 对于人类而言，这是一个微不足道的问题，近来也已经被经典的基于特征的技术（例如级联分类器）合理地解决了。最近，深度学习方法已在标准的基准人脸检测数据集上取得了最先进的结果。一个例子是多任务级联卷积神经网络(Multi-task Cascade Convolutional Neural Network)，简称MTCNN。
+MTCNN网络结构 该网络使用具有三个网络的级联结构。 首先将图像缩放到不同大小的范围（称为图像金字塔），然后第一个模型（建议网络或P-Net）提出候选的面部区域，第二个模型（Refine网络或R-Net）过滤边界框 ，第三个模型（输出网络或O-Net）提出了人脸标志。
+第一个网络是一个浅层神经网络（后简称pnet） => 产生初步候选框 第二个网络是一个“more complex CNN“相较pnet更为复杂的网络（后简称rnet）=> 从初步候选框中筛选掉大量的不包括人脸的框
+第三个网络是一个“more powerful CNN”相较rnet更为强大的网络（后简称onet）=> 进一步优化结果以及产生五个面部特征点（双眼，鼻尖，嘴角）
+mtcnn库 GitHub上发现，已经有同学做好了MTCNN相应的库
+ipazc/mtcnn: MTCNN face detection implementation for TensorFlow, as a PIP package.
+我们先简单使用一下：
+用笔记本自带摄像头拍摄一张照片，用opencv库导入。
+from mtcnn import MTCNN import cv2 img = cv2.cvtColor(cv2.imread("WIN_20200223_17_44_49_Pro.jpg"), cv2.COLOR_BGR2RGB) detector = MTCNN() detector.detect_faces(img) 我们可以得到一个list格式的数据
+[{'box': [480, 214, 234, 309], 'confidence': 0.9999535083770752, 'keypoints': {'left_eye': (536, 330), 'right_eye': (643, 334), 'nose': (583, 402), 'mouth_left': (543, 453), 'mouth_right': (633, 456)}}] 从这个list可以看出</div></div></div></div></section></div></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://arthuryunze.github.io/>&copy; Yunze's blog 2022</a><div><div class=ananke-socials></div></div></div></footer></body></html>
