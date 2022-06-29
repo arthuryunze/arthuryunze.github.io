@@ -1,0 +1,4 @@
+baseURL = 'https://arthuryunze.github.io/'
+languageCode = 'en-us'
+title = "Yunze's blog"
+theme = "ananke"
