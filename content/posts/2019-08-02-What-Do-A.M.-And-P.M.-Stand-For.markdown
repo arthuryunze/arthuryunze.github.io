@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "What Do A.M. And P.M. Stand For?"
+date:   2019-08-02 17:49:01 +0800
+categories: English
+---
+Most English speakers know that a.m. refers to the hours from midnight and noon, and p.m. to the hours from noon and midnight. But what do these ubiquitous abbreviations stand for?
+
+The term we associate with the morning, a.m., is an abbreviation the Latin phrase ante merīdiem meaning “before midday”; p.m. is an abbreviation of post merīdiem, meaning—you guessed it—“after midday.” These two terms help keep ambiguity at bay in the 12-hour time system. There is a third, lesser-known abbreviation in this system: m. from the Latin merīdiēs meaning “midday” means noon. However, m. is rarely used and might confuse readers or listeners should you casually drop it into conversation or insert it into your writing; noon is conventionally expressed as 12 p.m. or 12:00 p.m. and midnight as 12 a.m. or 12:00 a.m.
+
+In formal writing, it is best to lowercase both a.m. and p.m. and retain the periods (as opposed to writing them AM/PM or am/pm); however, should you choose to use a different format, the most important rule is to be consistent throughout your piece. Note that when a.m. or p.m. end a sentence, as in The train is arriving at 10 p.m., it is not necessary to place an additional period at the end. And, for our final writing tip, since these abbreviations specify an hour’s relation to noon, it is not necessary to use morning, evening, night, or o’clock with them.
