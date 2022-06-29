@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ProgramLanguage Haskell on Yunze's blog</title><link>https://arthuryunze.github.io/categories/programlanguage-haskell/</link><description>Recent content in ProgramLanguage Haskell on Yunze's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://arthuryunze.github.io/categories/programlanguage-haskell/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://arthuryunze.github.io/posts/2020-03-01-haskell-learn-%E4%B8%80/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://arthuryunze.github.io/posts/2020-03-01-haskell-learn-%E4%B8%80/</guid><description>Types and Typeclasses ghci 交互式shell中，:t判断变量类型。
-:t &amp;#39;a&amp;#39; &amp;#39;a&amp;#39; :: Char :: is read as &amp;ldquo;has type of&amp;rdquo;.
-函数类型显式声明 一般来说，Haskell有类型推断系统，不需要我们显式声明。但是，我们定义函数时会使用显式声明的办法。
-除了编写非常短的函数之外，这通常被认为是一个好的实践。
-This is generally considered to be good practice except when writing very short functions.
-addThree :: Int -&amp;gt; Int -&amp;gt; Int -&amp;gt; Int addThree x y z = x + y + z 前三个Int是参数类型，最后一个是输出类型。 参数之间用-&amp;gt;分隔，并且参数和返回类型之间没有特殊区别。
-product [1..10] 120 1到10的乘积
-head takes a list of any type and returns the first element</description></item></channel></rss>
