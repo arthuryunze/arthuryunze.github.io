@@ -4,7 +4,7 @@ date: 2022-06-29T16:57:58+08:00
 draft: false
 ---
 
-# hello head here
+# Change to Hugo static site generators
 
 hello here
 ---
