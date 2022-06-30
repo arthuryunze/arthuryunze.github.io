@@ -1,0 +1,86 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Ubuntu+apache2+MySQL8环境PHP升级版本 | Yunze's blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="catagories: 运维 description: LAMP安装配置 这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。
+原因 因某次手贱升级了MySQL数据库（版本从5到8），导致MySQL与php的兼容出了问题。
+Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MySQL8新的加密方式的（caching_sha2_password），所以PHP项目在连接数据库时就会出现连接失败的问题。phpmyadmin也无法登录。
+起初以为是root的远程访问权限出了问题，因为我的root权限是只限本机的（localhost），后来通过创建新的具有远程访问权限的用户发现还是无法连接，知道了跟用户权限没关系。
+（Linux再也不随便升级东西了，有些软件升级后，废弃的特性和新的特性会影响各种配置）。
+解决方案 找到解决方案前尝试了
+修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果 修改账户密码加密方式，修改后无效果 添加PHP源，这个时候PHP版本最新是7.4版本。
+add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt upgrade php
+sudo apt install php-mysql 安装php mysql扩展。
+至此，查看phpinfo界面，发现版本还是7.0，说明服务器没有使用新的版本。
+查看apache2相关配置文件后，发现php是以插件的形式存在于apache2服务器中的（在/etc apache2 中什么mods enable路径下可以找到），可以使用命令打开关闭。
+关闭php7.0，开启php7.4。
+sudo a2dismod php7.0
+sudo a2enmod php7.4
+重启apache2服务器
+sudo service apache2 restart
+至此，服务器上的php升级完成。phpinfo页的版本也已经更新。( •̀ ω •́ )y
+Reference：
+(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客
+SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园"><meta name=generator content="Hugo 0.101.0"><meta name=robots content="noindex, nofollow"><link rel=stylesheet href=/ananke/css/main.min.css><meta property="og:title" content="Ubuntu+apache2+MySQL8环境PHP升级版本"><meta property="og:description" content="catagories: 运维 description: LAMP安装配置 这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。
+原因 因某次手贱升级了MySQL数据库（版本从5到8），导致MySQL与php的兼容出了问题。
+Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MySQL8新的加密方式的（caching_sha2_password），所以PHP项目在连接数据库时就会出现连接失败的问题。phpmyadmin也无法登录。
+起初以为是root的远程访问权限出了问题，因为我的root权限是只限本机的（localhost），后来通过创建新的具有远程访问权限的用户发现还是无法连接，知道了跟用户权限没关系。
+（Linux再也不随便升级东西了，有些软件升级后，废弃的特性和新的特性会影响各种配置）。
+解决方案 找到解决方案前尝试了
+修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果 修改账户密码加密方式，修改后无效果 添加PHP源，这个时候PHP版本最新是7.4版本。
+add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt upgrade php
+sudo apt install php-mysql 安装php mysql扩展。
+至此，查看phpinfo界面，发现版本还是7.0，说明服务器没有使用新的版本。
+查看apache2相关配置文件后，发现php是以插件的形式存在于apache2服务器中的（在/etc apache2 中什么mods enable路径下可以找到），可以使用命令打开关闭。
+关闭php7.0，开启php7.4。
+sudo a2dismod php7.0
+sudo a2enmod php7.4
+重启apache2服务器
+sudo service apache2 restart
+至此，服务器上的php升级完成。phpinfo页的版本也已经更新。( •̀ ω •́ )y
+Reference：
+(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客
+SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园"><meta property="og:type" content="article"><meta property="og:url" content="https://arthuryunze.github.io/posts/ubuntu+apache2+mysql8%E7%8E%AF%E5%A2%83php%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-05-28T16:57:58+08:00"><meta property="article:modified_time" content="2020-05-28T16:57:58+08:00"><meta itemprop=name content="Ubuntu+apache2+MySQL8环境PHP升级版本"><meta itemprop=description content="catagories: 运维 description: LAMP安装配置 这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。
+原因 因某次手贱升级了MySQL数据库（版本从5到8），导致MySQL与php的兼容出了问题。
+Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MySQL8新的加密方式的（caching_sha2_password），所以PHP项目在连接数据库时就会出现连接失败的问题。phpmyadmin也无法登录。
+起初以为是root的远程访问权限出了问题，因为我的root权限是只限本机的（localhost），后来通过创建新的具有远程访问权限的用户发现还是无法连接，知道了跟用户权限没关系。
+（Linux再也不随便升级东西了，有些软件升级后，废弃的特性和新的特性会影响各种配置）。
+解决方案 找到解决方案前尝试了
+修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果 修改账户密码加密方式，修改后无效果 添加PHP源，这个时候PHP版本最新是7.4版本。
+add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt upgrade php
+sudo apt install php-mysql 安装php mysql扩展。
+至此，查看phpinfo界面，发现版本还是7.0，说明服务器没有使用新的版本。
+查看apache2相关配置文件后，发现php是以插件的形式存在于apache2服务器中的（在/etc apache2 中什么mods enable路径下可以找到），可以使用命令打开关闭。
+关闭php7.0，开启php7.4。
+sudo a2dismod php7.0
+sudo a2enmod php7.4
+重启apache2服务器
+sudo service apache2 restart
+至此，服务器上的php升级完成。phpinfo页的版本也已经更新。( •̀ ω •́ )y
+Reference：
+(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客
+SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园"><meta itemprop=datePublished content="2020-05-28T16:57:58+08:00"><meta itemprop=dateModified content="2020-05-28T16:57:58+08:00"><meta itemprop=wordCount content="102"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Ubuntu+apache2+MySQL8环境PHP升级版本"><meta name=twitter:description content="catagories: 运维 description: LAMP安装配置 这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。
+原因 因某次手贱升级了MySQL数据库（版本从5到8），导致MySQL与php的兼容出了问题。
+Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MySQL8新的加密方式的（caching_sha2_password），所以PHP项目在连接数据库时就会出现连接失败的问题。phpmyadmin也无法登录。
+起初以为是root的远程访问权限出了问题，因为我的root权限是只限本机的（localhost），后来通过创建新的具有远程访问权限的用户发现还是无法连接，知道了跟用户权限没关系。
+（Linux再也不随便升级东西了，有些软件升级后，废弃的特性和新的特性会影响各种配置）。
+解决方案 找到解决方案前尝试了
+修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果 修改账户密码加密方式，修改后无效果 添加PHP源，这个时候PHP版本最新是7.4版本。
+add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt upgrade php
+sudo apt install php-mysql 安装php mysql扩展。
+至此，查看phpinfo界面，发现版本还是7.0，说明服务器没有使用新的版本。
+查看apache2相关配置文件后，发现php是以插件的形式存在于apache2服务器中的（在/etc apache2 中什么mods enable路径下可以找到），可以使用命令打开关闭。
+关闭php7.0，开启php7.4。
+sudo a2dismod php7.0
+sudo a2enmod php7.4
+重启apache2服务器
+sudo service apache2 restart
+至此，服务器上的php升级完成。phpinfo页的版本也已经更新。( •̀ ω •́ )y
+Reference：
+(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客
+SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园"></head><body class="ma0 avenir bg-near-white"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib">Yunze's blog</a><div class="flex-l items-center"><div class=ananke-socials></div></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">POSTS</aside><div id=sharing class="mt3 ananke-socials"></div><h1 class="f1 athelas mt3 mb1">Ubuntu+apache2+MySQL8环境PHP升级版本</h1><time class="f6 mv4 dib tracked" datetime=2020-05-28T16:57:58+08:00>May 28, 2020</time></header><div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><hr><h2 id=description-lamp安装配置>catagories: 运维
+description: LAMP安装配置</h2><p>这篇文章旨在记录Ubuntu+apache2+MySQL8环境下升级PHP版本（无缝升级）的经过。</p><h2 id=原因>原因</h2><p>因某次手贱升级了MySQL数据库（版本从5到8），导致MySQL与php的兼容出了问题。<br>Ubuntu阿里源安装的PHP版本是7.0.3的。这个版本的PHP是不支持MySQL8新的加密方式的（caching_sha2_password），所以PHP项目在连接数据库时就会出现连接失败的问题。phpmyadmin也无法登录。</p><p>起初以为是root的远程访问权限出了问题，因为我的root权限是只限本机的（localhost），后来通过创建新的具有远程访问权限的用户发现还是无法连接，知道了跟用户权限没关系。</p><blockquote><p>（Linux再也不随便升级东西了，有些软件升级后，废弃的特性和新的特性会影响各种配置）。</p></blockquote><h2 id=解决方案>解决方案</h2><blockquote><p>找到解决方案前尝试了</p><ol><li>修改my.cnf，发现没有这个文件，且添加文件并修改也没有效果</li><li>修改账户密码加密方式，修改后无效果</li></ol></blockquote><p>添加PHP源，这个时候PHP版本最新是7.4版本。</p><p><code>add-apt-repository ppa:ondrej/php</code></p><p><code>sudo apt update</code></p><p><code>sudo apt upgrade php</code></p><p><code>sudo apt install php-mysql</code> 安装php mysql扩展。</p><p>至此，查看phpinfo界面，发现版本还是7.0，说明服务器没有使用新的版本。</p><p>查看apache2相关配置文件后，发现php是以插件的形式存在于apache2服务器中的（在/etc apache2 中什么mods enable路径下可以找到），可以使用命令打开关闭。</p><p>关闭php7.0，开启php7.4。</p><p><code>sudo a2dismod php7.0</code></p><p><code>sudo a2enmod php7.4</code></p><p>重启apache2服务器</p><p><code>sudo service apache2 restart</code></p><p>至此，服务器上的php升级完成。phpinfo页的版本也已经更新。( •̀ ω •́ )y</p><hr><p>Reference：</p><p><a href=https://blog.csdn.net/weixin_40208575/article/details/84961976>(11条消息)phpmyadmin连接MySQL8.0报错#2054 - The server requested authentication method unknown to the client_数据库_weixin_40208575的博客-CSDN博客</a></p><p><a href=https://www.cnblogs.com/cndavidwang/p/9357684.html>SHA2密码验证引起的PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client - 有欲 - 博客园</a></p><p><a href=https://learnku.com/articles/6845/ubuntu-php70-upgrade-to-71>Ubuntu PHP7.0 升级到 7.1 Laravel China 社区</a></p><p><a href=https://blog.csdn.net/xiaoxinshuaiga/article/details/82798919>(11条消息)PHP错误：SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client_php_xiaoxinshuaiga的博客-CSDN博客</a></p><p><a href=https://www.cnblogs.com/chanshuyi/p/mysql_user_mng.html>MySQL用户管理：添加用户、授权、删除用户 - 陈树义 - 博客园</a></p><ul class=pa0></ul><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l"></aside></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://arthuryunze.github.io/>&copy; Yunze's blog 2022</a><div><div class=ananke-socials></div></div></div></footer></body></html>

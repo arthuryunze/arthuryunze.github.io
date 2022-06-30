@@ -1,0 +1,106 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>一些python基础 | Yunze's blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="python基础 下划线 单前导下划线 _var 约定俗成的含义
+以单个下划线开头的变量或方法仅供内部使用。
+即私有，这不是Python强制规定的。 Python不像Java那样在“私有”和“公共”变量之间有很强的区别。
+前置双下划线 私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）
+前后双下划线 系统定义名字（这就是在python中强大的魔法方法），因为变量名__xxx__对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。
+参数传递 如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值&rsquo;来传递对象。
+python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。
+Python使用按引用传递（pass-by-reference）将参数传递到函数中。如果你改变一个函数内的参数，会影响到函数的调用。这是Python的默认操作。不过，如果我们传递字面参数，比如字符串、数字或元组，它们是按值传递，这是因为它们是不可变的。
+如何在Python中创建自己的包？ Python中创建包是比较方便的，只需要在当前目录建立一个文件夹，文件夹中包含一个__init__.py文件和若干个模块文件，其中__init__.py可以是一个空文件，但还是建议将包中所有需要导出的变量放到__all__中，这样可以确保包的接口清晰明了，易于使用。
+__all__ 只有以“from 模块名 import *”形式导入的模块，当该模块设有 __all__ 变量时，只能导入该变量指定的成员，未指定的成员是无法导入的。
+以下两种情况__all__不起作用
+以“import 模块名”的形式导入模块。 以“from 模块名 import 成员”的形式直接导入指定成员。 可变对象与不可变对象 可变对象（比如字典或者列表）
+不可变对象（比如数字、字符或者元组）
+不可变集合（frozenset） 集合是可变的。而不可变集合却不可变
+myset=frozenset([1,3,2,2]) myset 深拷贝浅拷贝 深拷贝 开辟新的内存空间
+import copy b=copy.deepcopy(a) 浅拷贝要分三种情况进行讨论 拷贝不可变对象：只是增加一个指向原对象的引用，改变会互相影响。
+拷贝可变对象(一层结构)：产生新的对象，开辟新的内存空间，改变互不影响。
+拷贝可变对象(多层结构)：产生新的对象，开辟新的内存空间，不改变包含的子对象则互不影响、改变包含的子对象则互相影响。
+>>> import copy >>> a = [1, 2, [3, 4]] >>> b = copy.copy(a) >>> b ... [1, 2, [3, 4]] # 查看两者的内存地址，不同，开辟了新的内存空间 >>> id(b) 1833997596488 >>> id(a) 1833997596424 >>> a is b ."><meta name=generator content="Hugo 0.101.0"><meta name=robots content="noindex, nofollow"><link rel=stylesheet href=/ananke/css/main.min.css><meta property="og:title" content="一些python基础"><meta property="og:description" content="python基础 下划线 单前导下划线 _var 约定俗成的含义
+以单个下划线开头的变量或方法仅供内部使用。
+即私有，这不是Python强制规定的。 Python不像Java那样在“私有”和“公共”变量之间有很强的区别。
+前置双下划线 私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）
+前后双下划线 系统定义名字（这就是在python中强大的魔法方法），因为变量名__xxx__对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。
+参数传递 如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值&rsquo;来传递对象。
+python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。
+Python使用按引用传递（pass-by-reference）将参数传递到函数中。如果你改变一个函数内的参数，会影响到函数的调用。这是Python的默认操作。不过，如果我们传递字面参数，比如字符串、数字或元组，它们是按值传递，这是因为它们是不可变的。
+如何在Python中创建自己的包？ Python中创建包是比较方便的，只需要在当前目录建立一个文件夹，文件夹中包含一个__init__.py文件和若干个模块文件，其中__init__.py可以是一个空文件，但还是建议将包中所有需要导出的变量放到__all__中，这样可以确保包的接口清晰明了，易于使用。
+__all__ 只有以“from 模块名 import *”形式导入的模块，当该模块设有 __all__ 变量时，只能导入该变量指定的成员，未指定的成员是无法导入的。
+以下两种情况__all__不起作用
+以“import 模块名”的形式导入模块。 以“from 模块名 import 成员”的形式直接导入指定成员。 可变对象与不可变对象 可变对象（比如字典或者列表）
+不可变对象（比如数字、字符或者元组）
+不可变集合（frozenset） 集合是可变的。而不可变集合却不可变
+myset=frozenset([1,3,2,2]) myset 深拷贝浅拷贝 深拷贝 开辟新的内存空间
+import copy b=copy.deepcopy(a) 浅拷贝要分三种情况进行讨论 拷贝不可变对象：只是增加一个指向原对象的引用，改变会互相影响。
+拷贝可变对象(一层结构)：产生新的对象，开辟新的内存空间，改变互不影响。
+拷贝可变对象(多层结构)：产生新的对象，开辟新的内存空间，不改变包含的子对象则互不影响、改变包含的子对象则互相影响。
+>>> import copy >>> a = [1, 2, [3, 4]] >>> b = copy.copy(a) >>> b ... [1, 2, [3, 4]] # 查看两者的内存地址，不同，开辟了新的内存空间 >>> id(b) 1833997596488 >>> id(a) 1833997596424 >>> a is b ."><meta property="og:type" content="article"><meta property="og:url" content="https://arthuryunze.github.io/posts/%E4%B8%80%E4%BA%9Bpython%E5%9F%BA%E7%A1%80/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-03-06T16:57:58+08:00"><meta property="article:modified_time" content="2021-03-06T16:57:58+08:00"><meta itemprop=name content="一些python基础"><meta itemprop=description content="python基础 下划线 单前导下划线 _var 约定俗成的含义
+以单个下划线开头的变量或方法仅供内部使用。
+即私有，这不是Python强制规定的。 Python不像Java那样在“私有”和“公共”变量之间有很强的区别。
+前置双下划线 私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）
+前后双下划线 系统定义名字（这就是在python中强大的魔法方法），因为变量名__xxx__对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。
+参数传递 如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值&rsquo;来传递对象。
+python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。
+Python使用按引用传递（pass-by-reference）将参数传递到函数中。如果你改变一个函数内的参数，会影响到函数的调用。这是Python的默认操作。不过，如果我们传递字面参数，比如字符串、数字或元组，它们是按值传递，这是因为它们是不可变的。
+如何在Python中创建自己的包？ Python中创建包是比较方便的，只需要在当前目录建立一个文件夹，文件夹中包含一个__init__.py文件和若干个模块文件，其中__init__.py可以是一个空文件，但还是建议将包中所有需要导出的变量放到__all__中，这样可以确保包的接口清晰明了，易于使用。
+__all__ 只有以“from 模块名 import *”形式导入的模块，当该模块设有 __all__ 变量时，只能导入该变量指定的成员，未指定的成员是无法导入的。
+以下两种情况__all__不起作用
+以“import 模块名”的形式导入模块。 以“from 模块名 import 成员”的形式直接导入指定成员。 可变对象与不可变对象 可变对象（比如字典或者列表）
+不可变对象（比如数字、字符或者元组）
+不可变集合（frozenset） 集合是可变的。而不可变集合却不可变
+myset=frozenset([1,3,2,2]) myset 深拷贝浅拷贝 深拷贝 开辟新的内存空间
+import copy b=copy.deepcopy(a) 浅拷贝要分三种情况进行讨论 拷贝不可变对象：只是增加一个指向原对象的引用，改变会互相影响。
+拷贝可变对象(一层结构)：产生新的对象，开辟新的内存空间，改变互不影响。
+拷贝可变对象(多层结构)：产生新的对象，开辟新的内存空间，不改变包含的子对象则互不影响、改变包含的子对象则互相影响。
+>>> import copy >>> a = [1, 2, [3, 4]] >>> b = copy.copy(a) >>> b ... [1, 2, [3, 4]] # 查看两者的内存地址，不同，开辟了新的内存空间 >>> id(b) 1833997596488 >>> id(a) 1833997596424 >>> a is b ."><meta itemprop=datePublished content="2021-03-06T16:57:58+08:00"><meta itemprop=dateModified content="2021-03-06T16:57:58+08:00"><meta itemprop=wordCount content="153"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="一些python基础"><meta name=twitter:description content="python基础 下划线 单前导下划线 _var 约定俗成的含义
+以单个下划线开头的变量或方法仅供内部使用。
+即私有，这不是Python强制规定的。 Python不像Java那样在“私有”和“公共”变量之间有很强的区别。
+前置双下划线 私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）
+前后双下划线 系统定义名字（这就是在python中强大的魔法方法），因为变量名__xxx__对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。
+参数传递 如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值&rsquo;来传递对象。
+python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。
+Python使用按引用传递（pass-by-reference）将参数传递到函数中。如果你改变一个函数内的参数，会影响到函数的调用。这是Python的默认操作。不过，如果我们传递字面参数，比如字符串、数字或元组，它们是按值传递，这是因为它们是不可变的。
+如何在Python中创建自己的包？ Python中创建包是比较方便的，只需要在当前目录建立一个文件夹，文件夹中包含一个__init__.py文件和若干个模块文件，其中__init__.py可以是一个空文件，但还是建议将包中所有需要导出的变量放到__all__中，这样可以确保包的接口清晰明了，易于使用。
+__all__ 只有以“from 模块名 import *”形式导入的模块，当该模块设有 __all__ 变量时，只能导入该变量指定的成员，未指定的成员是无法导入的。
+以下两种情况__all__不起作用
+以“import 模块名”的形式导入模块。 以“from 模块名 import 成员”的形式直接导入指定成员。 可变对象与不可变对象 可变对象（比如字典或者列表）
+不可变对象（比如数字、字符或者元组）
+不可变集合（frozenset） 集合是可变的。而不可变集合却不可变
+myset=frozenset([1,3,2,2]) myset 深拷贝浅拷贝 深拷贝 开辟新的内存空间
+import copy b=copy.deepcopy(a) 浅拷贝要分三种情况进行讨论 拷贝不可变对象：只是增加一个指向原对象的引用，改变会互相影响。
+拷贝可变对象(一层结构)：产生新的对象，开辟新的内存空间，改变互不影响。
+拷贝可变对象(多层结构)：产生新的对象，开辟新的内存空间，不改变包含的子对象则互不影响、改变包含的子对象则互相影响。
+>>> import copy >>> a = [1, 2, [3, 4]] >>> b = copy.copy(a) >>> b ... [1, 2, [3, 4]] # 查看两者的内存地址，不同，开辟了新的内存空间 >>> id(b) 1833997596488 >>> id(a) 1833997596424 >>> a is b ."></head><body class="ma0 avenir bg-near-white"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib">Yunze's blog</a><div class="flex-l items-center"><div class=ananke-socials></div></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">POSTS</aside><div id=sharing class="mt3 ananke-socials"></div><h1 class="f1 athelas mt3 mb1">一些python基础</h1><time class="f6 mv4 dib tracked" datetime=2021-03-06T16:57:58+08:00>March 6, 2021</time></header><div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id=python基础>python基础</h1><h2 id=下划线>下划线</h2><h3 id=单前导下划线-_var>单前导下划线 _var</h3><p>约定俗成的含义</p><p>以单个下划线开头的变量或方法仅供内部使用。</p><p>即私有，这不是Python强制规定的。 Python不像Java那样在“私有”和“公共”变量之间有很强的区别。</p><h3 id=前置双下划线>前置双下划线</h3><p>私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）</p><h3 id=前后双下划线>前后双下划线</h3><p>系统定义名字（这就是在python中强大的<code>魔法方法</code>），因为变量名<code>__xxx__</code>对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。</p><h2 id=参数传递>参数传递</h2><p>如果函数收到的是一个可变对象（比如字典或者列表）的引用，就能修改对象的原始值－－相当于通过“传引用”来传递对象。如果函数收到的是一个不可变对象（比如数字、字符或者元组）的引用，就不能直接修改原始对象－－相当于通过“传值&rsquo;来传递对象。</p><p>python不允许程序员选择采用传值还是传引用。Python参数传递采用的肯定是“传对象引用”的方式。这种方式相当于传值和传引用的一种综合。</p><p>Python使用按引用传递（pass-by-reference）将参数传递到函数中。如果你改变一个函数内的参数，会影响到函数的调用。这是Python的默认操作。不过，如果我们传递字面参数，比如字符串、数字或元组，它们是按值传递，这是因为它们是不可变的。</p><h2 id=如何在python中创建自己的包>如何在Python中创建自己的包？</h2><p>Python中创建包是比较方便的，只需要在当前目录建立一个文件夹，文件夹中包含一个<code>__init__.py</code>文件和若干个模块文件，其中<code>__init__.py</code>可以是一个空文件，但还是建议将包中所有需要导出的变量放到<code>__all__</code>中，这样可以确保包的接口清晰明了，易于使用。</p><h3 id=__all__><code>__all__</code></h3><p>只有以“from 模块名 import *”形式导入的模块，当该模块设有 <code>__all__ </code>变量时，只能导入该变量指定的成员，未指定的成员是无法导入的。</p><p>以下两种情况<code>__all__</code>不起作用</p><ul><li>以“import 模块名”的形式导入模块。</li><li>以“from 模块名 import 成员”的形式直接导入指定成员。</li></ul><h2 id=可变对象与不可变对象>可变对象与不可变对象</h2><p>可变对象（比如字典或者列表）</p><p>不可变对象（比如数字、字符或者元组）</p><h3 id=不可变集合frozenset>不可变集合（frozenset）</h3><p>集合是可变的。而不可变集合却不可变</p><pre tabindex=0><code>myset=frozenset([1,3,2,2])
+myset
+</code></pre><h2 id=深拷贝浅拷贝>深拷贝浅拷贝</h2><h3 id=深拷贝>深拷贝</h3><p>开辟新的内存空间</p><pre tabindex=0><code>import copy
+b=copy.deepcopy(a)
+</code></pre><h3 id=浅拷贝要分三种情况进行讨论>浅拷贝要分三种情况进行讨论</h3><ol><li><p>拷贝不可变对象：只是增加一个指向原对象的引用，改变会互相影响。</p></li><li><p>拷贝可变对象(一层结构)：产生新的对象，开辟新的内存空间，改变互不影响。</p></li><li><p>拷贝可变对象(多层结构)：<strong>产生新的对象，开辟新的内存空间，不改变包含的子对象则互不影响、改变包含的子对象则互相影响。</strong></p></li></ol><pre tabindex=0><code>&gt;&gt;&gt; import copy
+
+&gt;&gt;&gt; a = [1, 2, [3, 4]]
+&gt;&gt;&gt; b = copy.copy(a)
+&gt;&gt;&gt; b
+... [1, 2, [3, 4]]
+# 查看两者的内存地址，不同，开辟了新的内存空间
+&gt;&gt;&gt; id(b)
+1833997596488
+&gt;&gt;&gt; id(a)
+1833997596424
+&gt;&gt;&gt; a is b
+... False
+# 1.没有对包含的子对象进行修改，另一方关我卵事
+a = [1, 2, [3, 4]]    b = [1, 2, [3, 4]]
+&gt;&gt;&gt; b.append(5)
+&gt;&gt;&gt; a
+... [1, 2, [3, 4]]
+&gt;&gt;&gt; a.append(6)
+&gt;&gt;&gt; b
+... [1, 2, [3, 4], 5]
+# 2.对包含的子对象进行修改，另一方也随之改变
+a = [1, 2, [3, 4]]    b = [1, 2, [3, 4]]
+&gt;&gt;&gt; b[2].append(5)
+&gt;&gt;&gt; a
+... [1, 2, [3, 4, 5]]
+&gt;&gt;&gt; a[2].append(6)
+&gt;&gt;&gt; b
+... [1, 2, [3, 4, 5, 6]]
+</code></pre><ul class=pa0></ul><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l"></aside></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://arthuryunze.github.io/>&copy; Yunze's blog 2022</a><div><div class=ananke-socials></div></div></div></footer></body></html>
