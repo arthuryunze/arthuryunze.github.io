@@ -1,6 +1,6 @@
 # python生成器遇到loop域产生的问题
 
-```
+```python
 def triangles():
     L = [1]
     while True:
