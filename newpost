@@ -6,8 +6,12 @@ date=$(date +%Y-%m-%d)
 
 # 检查参数
 if [ -z "$1" ]; then
-  echo "❌ 错误：请提供文章标题，例如 ./newpost '我的新文章'"
-  exit 1
+  read -rp "😁 请输入文章标题：" input_title
+  if [ -z "$input_title" ]; then
+    echo "❌ 错误：文章标题不能为空"
+    exit 1
+  fi
+  set -- "$input_title"
 fi
 
 # 处理标题（空格转连字符，转小写）
